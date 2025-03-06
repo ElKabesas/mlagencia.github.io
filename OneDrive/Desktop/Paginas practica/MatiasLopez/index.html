@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="nav-container">
+        <!-- Transparent Nav with Light Hover -->
+        <nav class="nav-transparent">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+
+ <!-- Second Section with Animation -->
+  <section class="animated-section">
+    <div class="animated-content">
+      <h2 class="animated-title">Innovación y Diseño</h2>
+      <p class="animated-subtitle">Creamos experiencias memorables que conectan con tu audiencia y destacan tu marca.</p>
+    </div>
+  </section>
+
+<div class="porque">
+  <p class="porqueP">¿Porque necesitas una pagina web para tu negocio?</p>
+</div>
+
+  <section>
+    <div class="grid-container">
+      <div class="card">
+        <img src="4.webp" alt="Imagen 1" class="card-image">
+        <div class="card-content">
+          <h2 class="card-title">Control Total y Personalización</h2>
+          <p class="card-text">Tener una web permite personalizar completamente la experiencia del usuario, desde el diseño hasta las funcionalidades. A diferencia de marketplaces o redes sociales, aquí no hay restricciones de terceros ni cambios de algoritmo que afecten la visibilidad.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="2.webp" alt="2.webp" class="card-image">
+        <div class="card-content">
+          <h2 class="card-title">Mayor Alcance y Disponibilidad 24/7</h2>
+          <p class="card-text">Una web permite llegar a clientes potenciales en cualquier momento y lugar. Funciona como una oficina o tienda abierta todo el día, ofreciendo información, productos o servicios sin interrupciones.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="1.webp" alt="1.webp" class="card-image">
+        <div class="card-content">
+          <h2 class="card-title">Presencia y Credibilidad Online</h2>
+          <p class="card-text">Una página web brinda una imagen profesional y confiable a la empresa o marca. Es un espacio propio donde los clientes pueden encontrar información relevante sin depender de redes sociales u otras plataformas externas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script>
+    // Intersection Observer para la animación
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    // Observar el contenido animado
+    const animatedContent = document.querySelector('.animated-content');
+    observer.observe(animatedContent);
+  </script>
+
+
+
+
+</body>
+</html>

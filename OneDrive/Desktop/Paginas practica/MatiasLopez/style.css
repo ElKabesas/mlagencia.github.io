@@ -1,0 +1,164 @@
+/* Second Section with Animation */
+.animated-section {
+  background-image: url(3.png);
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.animated-section {
+  background-image: url(3.png);
+  background-size: cover;
+  /* Asegura que la imagen cubra toda la sección */
+  background-position: center;
+  /* Centra la imagen para evitar cortes */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.animated-content {
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.animated-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.animated-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+ background-color: black;
+  color: white;
+  /* Para que el texto sea legible */
+  margin: 0;
+}
+
+.nav-container {
+  margin: 20px;
+}
+
+/* Transparent Nav with Light Hover */
+.nav-transparent {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.nav-transparent ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.nav-transparent li {
+  position: relative;
+}
+
+.nav-transparent a {
+  color: #033f47;
+  text-decoration: none;
+  padding: 10px 25px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.nav-transparent li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 1px;
+  background: #ccc;
+}
+
+.nav-transparent a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(6, 63, 1, 0.5);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Crea 3 columnas de igual tamaño */
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  /*efecto del card grande*/
+  transform: translateY(-5px);
+  filter: brightness(120%);
+}
+
+.card-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  /* Hace que la imagen cubra el espacio sin distorsionarse */
+  display: block;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.porque {
+  display: flex;
+  justify-content: center;
+}
+
+.porqueP {
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+
+}
