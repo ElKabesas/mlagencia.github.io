@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://wa.me/541162971823" class="whatsapp-btn" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+       
+    <div class="nav-container">
+        <!-- Transparent Nav with Light Hover -->
+        <nav class="nav-transparent">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+<h1>Te damos algunos ejemplos de Paginas Web que podemos crear para vos</h1>
+
+        <div class="grid-container2">
+          <div class="item" data-pdf="pdf/construccion.pdf"><iframe src="pdf/construccion.pdf" frameborder="0"></iframe></div>
+          <div class="item" data-pdf="pdf/belleza.pdf"><iframe src="pdf/belleza.pdf" frameborder="0"></iframe></div>
+          <div class="item" data-pdf="pdf/profesorado.pdf"><iframe src="pdf/profesorado.pdf" frameborder="0"></iframe></div>
+          <div class="item" data-pdf="pdf/restaurante.pdf"><iframe src="pdf/restaurante.pdf" frameborder="0"></iframe></div>
+          <div class="item" data-pdf="pdf/taller.pdf"><iframe src="pdf/taller.pdf" frameborder="0"></iframe></div>
+          <div class="item" data-pdf="pdf/marketing.pdf"><iframe src="pdf/marketing.pdf" frameborder="0"></iframe></div>
+          <div class="item" data-pdf="pdf/venta-de-cosmeticos.pdf"><iframe src="pdf/venta-de-cosmeticos.pdf" frameborder="0"></iframe></div>
+      </div>
+  
+      <!-- Modal para mostrar el PDF en grande -->
+      <div id="pdfModal" class="pdf-modal">
+          <span class="close-button" id="closeModal">&times;</span>
+          <div class="pdf-modal-content">
+              <iframe id="modalPdfFrame" src="" frameborder="0"></iframe>
+          </div>
+      </div>
+      
+      <script>
+        // Obtener el modal
+        const modal = document.getElementById('pdfModal');
+        const modalIframe = document.getElementById('modalPdfFrame');
+        const closeButton = document.getElementById('closeModal');
+        
+        // Obtener todos los elementos de la cuadrícula
+        const items = document.querySelectorAll('.item');
+        
+        // Agregar evento de clic a cada elemento
+        items.forEach(item => {
+            item.addEventListener('click', function() {
+                // Obtener la ruta del PDF del atributo data-pdf
+                const pdfPath = this.getAttribute('data-pdf');
+                
+                // Establecer la ruta del PDF en el iframe del modal
+                modalIframe.src = pdfPath;
+                
+                // Mostrar el modal
+                modal.style.display = 'block';
+                
+                // Evitar que el clic pase al iframe
+                event.preventDefault();
+            });
+        });
+        
+        // Cerrar el modal cuando se hace clic en la X
+        closeButton.addEventListener('click', function() {
+            modal.style.display = 'none';
+            // Opcionalmente, puedes limpiar el src del iframe
+            modalIframe.src = '';
+        });
+        
+        // Cerrar el modal cuando se hace clic fuera del contenido
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                modalIframe.src = '';
+            }
+        });
+    </script>
+</body>
+</html>
